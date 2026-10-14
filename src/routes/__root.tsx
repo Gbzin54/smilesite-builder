@@ -80,15 +80,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Sorria | Odontologia" },
       { name: "description", content: "Cuidado odontológico com atenção, acolhimento e leveza." },
-      
+
       { property: "og:title", content: "Sorria | Odontologia" },
-      { property: "og:description", content: "Cuidado odontológico com atenção, acolhimento e leveza." },
+      {
+        property: "og:description",
+        content: "Cuidado odontológico com atenção, acolhimento e leveza.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
-      
+      { name: "theme-color", content: "#244a3d" },
     ],
     links: [
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;650;700&display=swap" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;650;700&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
